@@ -1,0 +1,47 @@
+.specials_bg {
+    background: url("../../assets/specials-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 80vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.specials_container {
+    align-self: center;
+    position: relative;
+    width: 40vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.62);
+    border-radius: 40px;
+    align-items: left;
+    align-content: center;
+    padding: 4ch;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.specials_title {
+    color: white;
+    font-family: var(--font-family);
+    text-decoration: underline;
+    text-underline-offset: 20%;
+    text-align: center;
+    font-size: 250%;
+    letter-spacing: 2px;
+    padding-bottom: 2ch;
+}
+
+.specials_container p {
+    color: white;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: 200%;
+}
