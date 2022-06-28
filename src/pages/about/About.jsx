@@ -13,19 +13,17 @@ const About = () => (
       <div className="about_title">
         About Us
       </div>
-      <div className="square">
-        <div>
-          <img src={Nail} alt="" />
-        </div>
-        <p>Here at Pedi N. Nails, we strive to offer our clients the best results and customer service possible. With our affordable services, you can live like royalty without having to spend like it.
-          We offer luxurious services like standard and deluxe pedicures as well as our top-of-the-line Volcano and Rose deluxe pedicures. See our full service list below for more details.
-        </p>
-        <p>
-          As a new salon based in Webster, New York, we are looking to make a name for ourselves by providing only the best products and ensuring customer satisfaction. Come find us at 2186 Empire Boulevard!
-        </p>
+      <div>
+        <img src={Nail} alt="" />
       </div>
+      <p>Here at Pedi N. Nails, we strive to offer our clients the best results and customer service possible. With our affordable services, you can live like royalty without having to spend like it.
+        We offer luxurious services like standard and deluxe pedicures as well as our top-of-the-line Volcano and Rose deluxe pedicures. See our full service list below for more details.
+      </p>
+      <p>
+        As a new salon based in Webster, New York, we are looking to make a name for ourselves by providing only the best products and ensuring customer satisfaction. Come find us at 2186 Empire Boulevard!
+      </p>
     </body>
-    <div className="buttons">
+    <div className="about_buttons">
       <Stack direction="row" spacing={3}>
         <a href="https://goo.gl/maps/4mRBnnfCaq5zUNYd8" target="_blank" rel="noopener noreferrer">
           <IconButton aria-label="location" size="large">

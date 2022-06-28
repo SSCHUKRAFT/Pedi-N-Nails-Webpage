@@ -1,8 +1,6 @@
 .services_bg {
     background: url("../../assets/services-bg.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-attachment: fixed;
     background-size: cover;
     height: fit-content;
     
@@ -34,7 +32,7 @@
     text-decoration: underline;
     text-underline-offset: 20%;
     text-align: center;
-    font-size: 250%;
+    font-size: 36px;
     letter-spacing: 2px;
     padding-bottom: 2ch;
     width: 100%;
@@ -43,7 +41,7 @@
 .services_column {
     color: white;
     font-family: var(--font-family);
-    font-size: 200%;
+    font-size: 32px;
     padding-bottom: 1%;
     padding-left: 7%;
     
@@ -57,8 +55,7 @@
 .prices_column {
     color: white;
     font-family: var(--font-family);
-    font-size: 200%;
-    padding-bottom: 1%;
+    font-size: 32px;
     padding-right: 7%;
     
     display: flex;
@@ -82,7 +79,82 @@
     padding-top: 5%;
 }
 
-.standard_mani {
-    width: 100%;
-    padding-top: 2%;
+@media (max-width: 1330px) {
+    .prices_column {
+        padding-right: 0;
+    }
+
+    .services_column {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1169px) {
+    .prices_column {
+        font-size: 24px;
+    }
+
+    .services_column {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .services_container {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 675px) {
+    .services_bg {
+        background-attachment: initial;
+    }
+    
+    .prices_column {
+        font-size: 20px;
+    }
+
+    .services_column {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 574px) {
+    .services_column {
+        font-size: 14px;
+    }
+    
+    .prices_column {
+        font-size: 14px;
+    }
+
+    .services_title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 425px) {
+    .services_container {
+        width: 90vw;
+        padding-left: 2ch;
+        padding-right: 2ch;
+    }
+
+    .services_column {
+        font-size: 12px;
+    }
+    
+    .prices_column {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .services_column {
+        font-size: 11px;
+    }
+    
+    .prices_column {
+        font-size: 11px;
+    }
 }

@@ -4,12 +4,12 @@ import './navbar.css';
 const Navbar = () => {
 
   return (
-    <div className="gpt3__navbar">
-      <div className="gpt3__navbar-links_logo">
-        <img src={logo} alt="" />
+    <div className="navbar">
+      <div className="navbar_logo">
+        <img src={logo} alt="Pedi N Nails" />
       </div>
-      <div className="gpt3__navbar-links">
-        <div className="gpt3__navbar-links_container">
+      <div className="navbar_links">
+        <div className="navbar_links_container">
           <p><a href="#home">Home</a></p>
           <p><a href="#about">About</a></p>
           <p><a href="#gallery">Gallery</a></p>
