@@ -72,7 +72,12 @@
     padding-top: 5%;
 }
 
-.classic_nails, .nail_filling, .acrylic_dip_extensions, .pedicures, .waxing, .additional, .kids {
+.standard_break {
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+.service_category {
     text-decoration: underline;
     text-underline-offset: 20%;
     padding-bottom: 2%;
