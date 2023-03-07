@@ -44,7 +44,7 @@ const Services = () => (
         <div>Eyebrow Wax</div>
         <div>Chin Wax</div>
         <div>Lip Wax</div>
-        <div>For Any Other Wax, Ask for Pricing</div>
+        <div>Other Wax</div>
         <div className="standard_break">&nbsp;</div>
 
         <div className="service_category">Additional Services</div>
@@ -103,6 +103,7 @@ const Services = () => (
         <div>$12</div>
         <div>$12</div>
         <div>$10</div>
+        <div>Ask For Price</div>
         <div>&nbsp;</div>
         <div className="standard_break">&nbsp;</div>
         <div className="prices_break">&nbsp;</div>

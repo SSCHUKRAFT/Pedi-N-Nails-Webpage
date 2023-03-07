@@ -84,7 +84,21 @@
     padding-top: 5%;
 }
 
-@media (max-width: 1330px) {
+.services_column div {
+    width: 150%;
+}
+
+@media (max-width: 1725px) {
+    .prices_column {
+        font-size: 26px;
+    }
+
+    .services_column {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1410px) {
     .prices_column {
         padding-right: 0;
     }
@@ -94,7 +108,7 @@
     }
 }
 
-@media (max-width: 1169px) {
+@media (max-width: 1245px) {
     .prices_column {
         font-size: 24px;
     }
@@ -104,7 +118,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1155px) {
     .services_container {
         width: 80vw;
     }
@@ -114,7 +128,9 @@
     .services_bg {
         background-attachment: initial;
     }
-    
+}
+
+@media (max-width: 860px) {
     .prices_column {
         font-size: 20px;
     }
@@ -124,21 +140,14 @@
     }
 }
 
-@media (max-width: 574px) {
-    .services_column {
-        font-size: 14px;
-    }
-    
-    .prices_column {
-        font-size: 14px;
-    }
+@media (max-width: 730px) {
 
     .services_title {
         font-size: 24px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 525px) {
     .services_container {
         width: 90vw;
         padding-left: 2ch;
@@ -146,20 +155,30 @@
     }
 
     .services_column {
-        font-size: 12px;
+        font-size: 20px;
     }
     
     .prices_column {
-        font-size: 12px;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 410px) {
     .services_column {
-        font-size: 11px;
+        font-size: 16px;
     }
     
     .prices_column {
-        font-size: 11px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 345px) {
+    .services_column {
+        font-size: 12px;
+    }
+    
+    .prices_column {
+        font-size: 12px;
     }
 }
