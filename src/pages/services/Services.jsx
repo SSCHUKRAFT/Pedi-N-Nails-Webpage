@@ -104,7 +104,6 @@ const Services = () => (
         <div>$12</div>
         <div>$10</div>
         <div>Ask For Price</div>
-        <div>&nbsp;</div>
         <div className="standard_break">&nbsp;</div>
         <div className="prices_break">&nbsp;</div>
         <div>$10</div>
