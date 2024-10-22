@@ -55,10 +55,8 @@ const Services = () => (
         <div className="standard_break">&nbsp;</div>
 
         <div className="service_category">Kids 10 & Under</div>
-        <div>Standard Manicure</div>
-        <div>Standard Pedicure</div>
-        <div>Gel Manicure</div>
-        <div>Gel Pedicure</div>
+        <div>Manicure</div>
+        <div>Pedicure</div>
         <div>Nail Art/Design</div>
       </div>
       <div className="prices_column">
@@ -107,8 +105,6 @@ const Services = () => (
         <div>$05</div>
         <div className="standard_break">&nbsp;</div>
         <div className="prices_break">Starting At</div>
-        <div>$10</div>
-        <div>$15</div>
         <div>$15</div>
         <div>$20</div>
         <div>$05</div>
