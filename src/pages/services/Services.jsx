@@ -1,116 +1,192 @@
 import React from 'react';
 import './services.css';
+import backgroundImg from '../../assets/services-bg.jpg';
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  Box,
+  Grid,
+  Paper,
+  useTheme,
+  useMediaQuery,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const Services = () => (
-  <div className="services_bg" id="services">
-    <div className="services_container">
-      <div className="services_title">Services</div>
-      <div className="services_column">
-        <div className="service_category">Manicures</div>
-        <div>Classic Manicure</div>
-        <div>Deluxe Manicure</div>
-        <div>Gel Manicure</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>Regular Fill</div>
-        <div>Gel Fill</div>
-        <div>Ombre' Fill</div>
-        <div>Pink & White Fill</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>Standard Full Set</div>
-        <div>Gel Full Set</div>
-        <div>White/Clear Tips Full Set</div>
-        <div>Pink/White Full Set</div>
-        <div>Ombre' Full Set</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>Standard Dipping Powder</div>
-        <div>Dipping Powder With Tip</div>
-        <div>Dipping Powder With French</div>
-        <div className="standard_break">&nbsp;</div>
+const serviceData = {
+  Manicures: [
+    ['Classic Manicure', '$20'],
+    ['Deluxe Manicure', '$28'],
+    ['Gel Manicure', '$30'],
+    ['Regular Fill', '$25'],
+    ['Gel Fill', '$35'],
+    ['Ombre\' Fill', '$40'],
+    ['Pink & White Fill', '$40'],
+    ['Standard Full Set', '$35'],
+    ['Gel Full Set', '$45'],
+    ['White/Clear Tips Full Set', '$40'],
+    ['Pink/White Full Set', '$50'],
+    ['Ombre\' Full Set', '$55'],
+    ['Standard Dipping Powder', '$40'],
+    ['Dipping Powder With Tip', '$50'],
+    ['Dipping Powder With French', '$50'],
+  ],
+  Pedicures: [
+    ['Gel Polish', '$20'],
+    ['Standard Pedicure', '$30'],
+    ['Codi Pedicure', '$45'],
+    ['Gel Pedicure', '$50'],
+    ['Detox Signature Pedicure', '$55'],
+    ['Collagen Pedicure', '$65'],
+    ['24K Golden Pedicure', '$75'],
+  ],
+  Waxing: [
+    ['Eyebrow Wax', '$12'],
+    ['Chin Wax', '$12'],
+    ['Lip Wax', '$10'],
+    ['Other Wax', 'Ask For Price'],
+  ],
+  'Additional Services': [
+    ['Standard Nail Polish Change', '$10'],
+    ['Standard Toe Nail Polish Change', '$15'],
+    ['Gel Nail Polish Change', '$25'],
+    ['Gel Toe Nail Polish Change', '$25'],
+    ['Nails Shape', '$5'],
+    ['Chrome Color', '$10'],
+    ['Cat-Eyes', '$10'],
+    ['Gel Removal', '$5'],
+    ['Acrylic Removal', '$15'],
+    ['Dip Powder', '$5'],
+  ],
+  'Kids 10 & Under': [
+    ['Manicure', '$15'],
+    ['Pedicure', '$20'],
+    ['Nail Art/Design', '$5'],
+  ],
+};
 
-        <div className="service_category">Pedicures</div>
-        <div>Standard Pedicure</div>
-        <div>Volcano Spa Pedicure</div>
-        <div>Rose Deluxe Pedicure</div>
-        <div>Gel Pedicure</div>
-        <div className="standard_break">&nbsp;</div>
+const Services = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-        <div className="service_category">Waxing</div>
-        <div>Eyebrow Wax</div>
-        <div>Chin Wax</div>
-        <div>Lip Wax</div>
-        <div>Other Wax</div>
-        <div className="standard_break">&nbsp;</div>
+  return (
+    <Box
+      id="services"
+      sx={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundAttachment: isSmallScreen ? 'initial' : 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        py: 6,
+        px: 2,
+      }}
+    >
+      <Paper
+        elevation={6}
+        sx={{
+          backgroundColor: 'rgba(0, 0, 0, 0.62)',
+          color: 'white',
+          width: {
+            xs: '90vw',
+            sm: '80vw',
+            md: '60vw',
+          },
+          borderRadius: '40px',
+          p: {
+            xs: 2,
+            sm: 4,
+          },
+        }}
+      >
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          sx={{
+            fontFamily: 'var(--font-family)',
+            textDecoration: 'underline',
+            textUnderlineOffset: '20%',
+            fontSize: {
+              xs: '24px',
+              sm: '32px',
+              md: '36px',
+            },
+            letterSpacing: '2px',
+            pb: 3,
+          }}
+        >
+          Services
+        </Typography>
 
-        <div className="service_category">Additional Services</div>
-        <div>Standard Nail Polish Change</div>
-        <div>Standard Toe Nail Polish Change</div>
-        <div>Gel Nail Polish Change</div>
-        <div>Gel Toe Nail Polish Change</div>
-        <div>Nails Shape</div>
-        <div>Chrome Color</div>
-        <div>Cat-Eyes</div>
-        <div>Gel Removal</div>
-        <div>Acrylic Removal</div>
-        <div>Dip Powder</div>
-        <div className="standard_break">&nbsp;</div>
-
-        <div className="service_category">Kids 10 & Under</div>
-        <div>Manicure</div>
-        <div>Pedicure</div>
-        <div>Nail Art/Design</div>
-      </div>
-      <div className="prices_column">
-        <div className="prices_break">Starting At</div>
-        <div>$20</div>
-        <div>$28</div>
-        <div>$30</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>$25</div>
-        <div>$35</div>
-        <div>$40</div>
-        <div>$40</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>$35</div>
-        <div>$45</div>
-        <div>$40</div>
-        <div>$50</div>
-        <div>$55</div>
-        <div className="standard_break">&nbsp;</div>
-        <div>$40</div>
-        <div>$50</div>
-        <div>$50</div>
-        <div className="standard_break">&nbsp;</div>
-        <div className="prices_break">Starting At</div>
-        <div>$30</div>
-        <div>$45</div>
-        <div>$48</div>
-        <div>$50</div>
-        <div className="standard_break">&nbsp;</div>
-        <div className="prices_break">Starting At</div>
-        <div>$12</div>
-        <div>$12</div>
-        <div>$10</div>
-        <div>Ask For Price</div>
-        <div className="standard_break">&nbsp;</div>
-        <div className="prices_break">Starting At</div>
-        <div>$10</div>
-        <div>$15</div>
-        <div>$25</div>
-        <div>$25</div>
-        <div>$05</div>
-        <div>$10</div>
-        <div>$10</div>
-        <div>$05</div>
-        <div>$15</div>
-        <div>$05</div>
-        <div className="standard_break">&nbsp;</div>
-        <div className="prices_break">Starting At</div>
-        <div>$15</div>
-        <div>$20</div>
-        <div>$05</div>
-      </div>
-    </div>
-  </div>
-);
+        {Object.entries(serviceData).map(([category, services]) => (
+          <Accordion
+            key={category}
+            sx={{
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              color: 'white',
+              mb: 2,
+              '&:before': { display: 'none' },
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontSize: {
+                    xs: '20px',
+                    sm: '24px',
+                    md: '28px',
+                  },
+                }}
+              >
+                {category}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Grid container spacing={1}>
+                {services.map(([name, price], index) => (
+                  <React.Fragment key={index}>
+                    <Grid item xs={8}>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: '14px',
+                            sm: '16px',
+                            md: '18px',
+                          },
+                        }}
+                      >
+                        {name}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography
+                        align="right"
+                        sx={{
+                          fontSize: {
+                            xs: '14px',
+                            sm: '16px',
+                            md: '18px',
+                          },
+                        }}
+                      >
+                        {price}
+                      </Typography>
+                    </Grid>
+                  </React.Fragment>
+                ))}
+              </Grid>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </Paper>
+    </Box>
+  );
+};
 
 export default Services;
