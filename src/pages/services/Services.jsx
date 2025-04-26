@@ -33,13 +33,13 @@ const serviceData = {
     ['Dipping Powder With French', '$50'],
   ],
   Pedicures: [
-    ['Gel Polish', '$20'],
     ['Standard Pedicure', '$30'],
     ['Codi Pedicure', '$45'],
     ['Gel Pedicure', '$50'],
     ['Detox Signature Pedicure', '$55'],
     ['Collagen Pedicure', '$65'],
     ['24K Golden Pedicure', '$75'],
+    ['Add Gel Polish', '$20'],
   ],
   Waxing: [
     ['Eyebrow Wax', '$12'],
