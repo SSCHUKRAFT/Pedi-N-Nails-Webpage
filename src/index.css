@@ -1,8 +1,38 @@
 @font-face {
   font-family: abel;
-  src: url(./assets/Abel-Regular.ttf);
+  src: url('./assets/Abel-Regular.ttf');
 }
 
-:root {
-  --font-family: abel;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #f7f1e3;
+  font-family: abel, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

@@ -1,30 +1,61 @@
 import React from 'react';
-import nail1 from '../../assets/Nail1.jpg';
-import nail2 from '../../assets/Nail2.jpg';
-import nail3 from '../../assets/Nail3.jpg';
-import nail4 from '../../assets/Nail4.jpg';
-import nail5 from '../../assets/Nail5.jpg';
-import nail6 from '../../assets/Nail6.jpg';
-import nail7 from '../../assets/Nail7.jpg';
-import nail8 from '../../assets/Nail8.jpg';
-import './gallery.css';
+import { Box, Card, Container, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
+import { galleryImages } from '../../siteData';
 
 const Gallery = () => (
-  <div className="gallery_background" id="gallery">
-    <div className="gallery_title">
-      Gallery
-    </div>
-    <div className="gallery_container">
-      <img src={nail1} alt="" />
-      <img src={nail2} alt="" />
-      <img src={nail3} alt="" />
-      <img src={nail4} alt="" />
-      <img src={nail5} alt="" />
-      <img src={nail6} alt="" />
-      <img src={nail7} alt="" />
-      <img src={nail8} alt="" />
-    </div>
-  </div>
+  <Box className="page-shell page-backdrop">
+    <Container size="xl" py={{ base: 56, md: 80 }}>
+      <Stack gap="md" mb="xl">
+        <Text tt="uppercase" fw={700} c="gold.3" style={{ letterSpacing: '0.18em' }}>
+          Photo gallery
+        </Text>
+        <Title order={1}>Recent salon looks</Title>
+        <Text size="lg" c="rgba(247, 241, 227, 0.78)" maw={640}>
+          A more modern gallery experience with swipe-friendly mobile browsing and a clean desktop grid.
+        </Text>
+      </Stack>
+
+      <Carousel
+        withIndicators
+        loop
+        slideSize={{ base: '100%', sm: '50%' }}
+        slideGap="md"
+        align="start"
+        mb="xl"
+        styles={{
+          indicator: {
+            backgroundColor: '#efcf7f',
+          },
+          control: {
+            backgroundColor: 'rgba(13, 13, 13, 0.85)',
+            borderColor: 'rgba(239, 207, 127, 0.3)',
+            color: '#efcf7f',
+          },
+        }}
+      >
+        {galleryImages.map((image) => (
+          <Carousel.Slide key={image.src}>
+            <Card className="gold-panel" radius="xl" p="sm">
+              <Card.Section>
+                <Image src={image.src} alt={image.alt} h={{ base: 300, md: 420 }} fit="cover" />
+              </Card.Section>
+            </Card>
+          </Carousel.Slide>
+        ))}
+      </Carousel>
+
+      <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
+        {galleryImages.map((image) => (
+          <Card key={image.src} className="gold-panel" radius="xl" p="sm">
+            <Card.Section>
+              <Image src={image.src} alt={image.alt} h={260} fit="cover" />
+            </Card.Section>
+          </Card>
+        ))}
+      </SimpleGrid>
+    </Container>
+  </Box>
 );
 
 export default Gallery;

@@ -1,38 +1,66 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+.page-shell {
+  min-height: calc(100vh - 76px);
+  position: relative;
 }
 
-a {
-  color: unset;
-  text-decoration: none;
+.gold-panel {
+  background:
+    linear-gradient(145deg, rgba(255, 215, 128, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(13, 13, 13, 0.84);
+  border: 1px solid rgba(239, 207, 127, 0.2);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(14px);
 }
 
-.scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+.page-backdrop {
+  background:
+    radial-gradient(circle at top left, rgba(233, 193, 96, 0.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(221, 176, 74, 0.05), transparent 24%),
+    linear-gradient(180deg, #050505 0%, #12100d 52%, #050505 100%);
 }
 
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+.review-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.review-marquee::before,
+.review-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 56px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.review-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(13, 13, 13, 0.96), transparent);
+}
+
+.review-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(13, 13, 13, 0.96), transparent);
+}
+
+.review-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: review-scroll 36s linear infinite;
+}
+
+.review-marquee:hover .review-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes review-scroll {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
 
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  to {
+    transform: translateX(-50%);
   }
 }
