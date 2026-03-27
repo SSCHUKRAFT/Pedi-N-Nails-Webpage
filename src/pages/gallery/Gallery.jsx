@@ -11,9 +11,6 @@ const Gallery = () => (
           Photo gallery
         </Text>
         <Title order={1}>Recent salon looks</Title>
-        <Text size="lg" c="rgba(247, 241, 227, 0.78)" maw={640}>
-          A more modern gallery experience with swipe-friendly mobile browsing and a clean desktop grid.
-        </Text>
       </Stack>
 
       <Carousel

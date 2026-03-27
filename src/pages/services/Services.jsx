@@ -31,7 +31,7 @@ const Services = () => (
         </Text>
         <Title order={1}>Services and pricing</Title>
         <Text size="lg" c="rgba(247, 241, 227, 0.78)" maw={660}>
-          The service list is now organized into expandable categories so it feels cleaner on mobile and easier to skim on desktop.
+          Each service listed is the minimum price, with additional options available for an extra fee.
         </Text>
       </Stack>
 
