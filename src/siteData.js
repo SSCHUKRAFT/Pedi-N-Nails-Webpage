@@ -137,7 +137,7 @@ export const serviceData = {
     ['Gel Manicure', '$30'],
     ['Gel Fill', '$40'],
     ["Ombre' Fill", '$45'],
-    ['Pink & White Fill', '$40'],
+    ['Pink & White Fill', '$55'],
     ['Gel Full Set', '$50'],
     ['Pink/White Full Set', '$60'],
     ["Ombre' Full Set", '$55'],
