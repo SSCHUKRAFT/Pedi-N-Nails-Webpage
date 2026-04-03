@@ -11,14 +11,31 @@ import heroImage from './assets/home-bg.jpg';
 import aboutImage from './assets/about-nail.jpg';
 import serviceImage from './assets/services-bg.jpg';
 import specialsImage from './assets/specials-bg.jpg';
-import nail1 from './assets/Nail1.jpg';
-import nail2 from './assets/Nail2.jpg';
-import nail3 from './assets/Nail3.jpg';
-import nail4 from './assets/Nail4.jpg';
-import nail5 from './assets/Nail5.jpg';
-import nail6 from './assets/Nail6.jpg';
-import nail7 from './assets/Nail7.jpg';
-import nail8 from './assets/Nail8.jpg';
+import gallery1 from './assets/gallery/gallery1.jpg';
+import gallery2 from './assets/gallery/gallery2.jpg';
+import gallery3 from './assets/gallery/gallery3.jpg';
+import gallery4 from './assets/gallery/gallery4.jpg';
+import gallery5 from './assets/gallery/gallery5.jpg';
+import gallery6 from './assets/gallery/gallery6.jpg';
+import gallery7 from './assets/gallery/gallery7.jpg';
+import gallery8 from './assets/gallery/gallery8.jpg';
+import gallery9 from './assets/gallery/gallery9.jpg';
+import gallery10 from './assets/gallery/gallery10.jpg';
+import gallery11 from './assets/gallery/gallery11.jpg';
+import gallery12 from './assets/gallery/gallery12.jpg';
+import gallery13 from './assets/gallery/gallery13.jpg';
+import gallery14 from './assets/gallery/gallery14.jpg';
+import gallery15 from './assets/gallery/gallery15.jpg';
+import gallery16 from './assets/gallery/gallery16.jpg';
+import gallery17 from './assets/gallery/gallery17.jpg';
+import gallery18 from './assets/gallery/gallery18.jpg';
+import gallery19 from './assets/gallery/gallery19.jpg';
+import gallery20 from './assets/gallery/gallery20.jpg';
+import gallery21 from './assets/gallery/gallery21.jpg';
+import gallery22 from './assets/gallery/gallery22.jpg';
+import gallery23 from './assets/gallery/gallery23.jpg';
+import gallery24 from './assets/gallery/gallery24.jpg';
+import gallery25 from './assets/gallery/gallery25.jpg';
 
 export const navigationLinks = [
   { label: 'Home', path: '/', icon: IconHome },
@@ -86,14 +103,31 @@ export const specialsContent = {
 };
 
 export const galleryImages = [
-  { src: nail1, alt: 'Pink and glitter nail design' },
-  { src: nail2, alt: 'Soft glossy manicure' },
-  { src: nail3, alt: 'Detailed nail art close-up' },
-  { src: nail4, alt: 'Neutral nail set' },
-  { src: nail5, alt: 'Bold manicure design' },
-  { src: nail6, alt: 'Classic polished nails' },
-  { src: nail7, alt: 'Elegant sculpted nail set' },
-  { src: nail8, alt: 'Decorative salon nail art' },
+  { src: gallery1, alt: 'Nail salon gallery photo 1' },
+  { src: gallery2, alt: 'Nail salon gallery photo 2' },
+  { src: gallery3, alt: 'Nail salon gallery photo 3' },
+  { src: gallery4, alt: 'Nail salon gallery photo 4' },
+  { src: gallery5, alt: 'Nail salon gallery photo 5' },
+  { src: gallery6, alt: 'Nail salon gallery photo 6' },
+  { src: gallery7, alt: 'Nail salon gallery photo 7' },
+  { src: gallery8, alt: 'Nail salon gallery photo 8' },
+  { src: gallery9, alt: 'Nail salon gallery photo 9' },
+  { src: gallery10, alt: 'Nail salon gallery photo 10' },
+  { src: gallery11, alt: 'Nail salon gallery photo 11' },
+  { src: gallery12, alt: 'Nail salon gallery photo 12' },
+  { src: gallery13, alt: 'Nail salon gallery photo 13' },
+  { src: gallery14, alt: 'Nail salon gallery photo 14' },
+  { src: gallery15, alt: 'Nail salon gallery photo 15' },
+  { src: gallery16, alt: 'Nail salon gallery photo 16' },
+  { src: gallery17, alt: 'Nail salon gallery photo 17' },
+  { src: gallery18, alt: 'Nail salon gallery photo 18' },
+  { src: gallery19, alt: 'Nail salon gallery photo 19' },
+  { src: gallery20, alt: 'Nail salon gallery photo 20' },
+  { src: gallery21, alt: 'Nail salon gallery photo 21' },
+  { src: gallery22, alt: 'Nail salon gallery photo 22' },
+  { src: gallery23, alt: 'Nail salon gallery photo 23' },
+  { src: gallery24, alt: 'Nail salon gallery photo 24' },
+  { src: gallery25, alt: 'Nail salon gallery photo 25' },
 ];
 
 export const serviceData = {

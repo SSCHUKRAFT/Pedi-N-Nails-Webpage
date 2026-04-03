@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Card, Container, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import { Box, Card, Container, Image, Stack, Text, Title } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { galleryImages } from '../../siteData';
 
 const Gallery = () => (
   <Box className="page-shell page-backdrop">
-    <Container size="xl" py={{ base: 56, md: 80 }}>
-      <Stack gap="md" mb="xl">
+    <Container size="xl" py={{ base: 32, md: 80 }}>
+      <Stack gap="md" mb={{ base: 'lg', md: 'xl' }}>
         <Text tt="uppercase" fw={700} c="gold.3" style={{ letterSpacing: '0.18em' }}>
           Photo gallery
         </Text>
@@ -14,16 +14,14 @@ const Gallery = () => (
       </Stack>
 
       <Carousel
-        withIndicators
         loop
-        slideSize={{ base: '100%', sm: '50%' }}
+        slideSize={{ base: '100%', sm: '50%', lg: '33.333333%' }}
         slideGap="md"
         align="start"
-        mb="xl"
+        draggable
+        controlSize={36}
+        mb={{ base: 'md', md: 'xl' }}
         styles={{
-          indicator: {
-            backgroundColor: '#efcf7f',
-          },
           control: {
             backgroundColor: 'rgba(13, 13, 13, 0.85)',
             borderColor: 'rgba(239, 207, 127, 0.3)',
@@ -35,22 +33,18 @@ const Gallery = () => (
           <Carousel.Slide key={image.src}>
             <Card className="gold-panel" radius="xl" p="sm">
               <Card.Section>
-                <Image src={image.src} alt={image.alt} h={{ base: 300, md: 420 }} fit="cover" />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  h={{ base: '62vh', sm: 420, md: 460 }}
+                  mah={{ base: 560, sm: 'none' }}
+                  fit="cover"
+                />
               </Card.Section>
             </Card>
           </Carousel.Slide>
         ))}
       </Carousel>
-
-      <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
-        {galleryImages.map((image) => (
-          <Card key={image.src} className="gold-panel" radius="xl" p="sm">
-            <Card.Section>
-              <Image src={image.src} alt={image.alt} h={260} fit="cover" />
-            </Card.Section>
-          </Card>
-        ))}
-      </SimpleGrid>
     </Container>
   </Box>
 );
