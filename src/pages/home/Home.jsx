@@ -24,18 +24,11 @@ const highlights = [
   'A warm local salon experience in Webster',
 ];
 
-const PROMO_STORAGE_KEY = 'pedi-n-nails-easter-promo-2026-seen';
-
 const Home = () => {
   const [promoOpened, setPromoOpened] = useState(false);
 
   useEffect(() => {
-    const hasSeenPromo = window.localStorage.getItem(PROMO_STORAGE_KEY);
-
-    if (!hasSeenPromo) {
-      setPromoOpened(true);
-      window.localStorage.setItem(PROMO_STORAGE_KEY, 'true');
-    }
+    setPromoOpened(true);
   }, []);
 
   return (
